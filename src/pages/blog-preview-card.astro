@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import qrCode from "../../assets/QRCodeComponent/image-qr-code.png";
+---
+
+<Layout title="Frontend Mentor | Blog Preview Card">
+    <main
+        class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E]"
+    >
+        <div class="w-[20rem] rounded-3xl bg-white p-4 shadow-lg">
+            <Image src={qrCode} alt="QR Code" class="size-72 rounded-xl" />
+            <div
+                class="flex flex-col justify-between gap-4 p-4 text-center font-sans"
+            >
+                <h1 class="text-xl font-bold text-slate-800">
+                    Improve your front-end skills by building projects
+                </h1>
+                <div class="text-sm text-neutral-500">
+                    Scan the QR code to visit Frontend Mentor and take your
+                    coding skills to the next level
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .mid-text {
+        color: green;
+        font-size: 1.3rem;
+    }
+</style>
