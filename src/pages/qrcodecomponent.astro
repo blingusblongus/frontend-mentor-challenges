@@ -5,8 +5,10 @@ import qrCode from "../../assets/QRCodeComponent/image-qr-code.png";
 ---
 
 <Layout title="Frontend Mentor | QR code component">
-    <div class="flex h-[100vh] w-full items-center justify-center bg-[#D5E0EF]">
-        <div class="w-[20rem] rounded-3xl bg-white p-4 shadow-sm">
+    <main
+        class="flex h-[100vh] w-full items-center justify-center bg-[#D5E0EF]"
+    >
+        <div class="w-[20rem] rounded-3xl bg-white p-4 shadow-lg">
             <Image src={qrCode} alt="QR Code" class="size-72 rounded-xl" />
             <div class="flex flex-col justify-between gap-4 p-4 text-center">
                 <div class="text-xl font-bold text-slate-800">
@@ -18,7 +20,7 @@ import qrCode from "../../assets/QRCodeComponent/image-qr-code.png";
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </Layout>
 
 <style>
