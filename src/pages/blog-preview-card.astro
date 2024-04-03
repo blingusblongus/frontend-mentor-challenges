@@ -1,14 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import blogPreview from "../../assets/blog-preview-card-main/assets/images/illustration-article.svg";
-import {
-    Card,
-    CardTitle,
-    CardHeader,
-    CardContent,
-} from "../components/ui/card";
-// Supports weights 300-900
+import { Picture } from "astro:assets";
+import blogPreview from "../assets/blog-preview-card-main/assets/images/illustration-article.svg";
+import avatar from "../assets/blog-preview-card-main/assets/images/image-avatar.webp";
+import { Card, CardTitle, CardHeader } from "../components/ui/card";
 import "@fontsource-variable/figtree";
 
 const tags = ["Learning"];
@@ -16,16 +11,17 @@ const tags = ["Learning"];
 
 <Layout title="Frontend Mentor | Blog Preview Card">
     <main
-        class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E] font-figtree"
+        class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E] p-5 font-figtree"
     >
         <Card
-            className="w-72 rounded-2xl border border-black shadow-[0.2rem_0.3rem_0_0_#000]"
+            className="w-[17.5rem] rounded-2xl border border-black shadow-[0.4rem_0.4rem_0_0_#000]"
         >
-            <CardHeader className=" gap-3">
-                <Image
+            <CardHeader className="gap-2">
+                <Picture
                     src={blogPreview}
                     alt="Preview Image"
-                    class="rounded-xl"
+                    class="h-40 w-64 rounded-xl"
+                    style={{ objectFit: "cover" }}
                 />
 
                 <div class="text-sm font-bold">
@@ -38,14 +34,20 @@ const tags = ["Learning"];
                     }
                 </div>
 
-                <div class="text-xs font-[600]">Published 21 Dec 2023</div>
+                <div class="text-[.7rem] font-[700] text-neutral-600">
+                    Published 21 Dec 2023
+                </div>
 
-                <CardTitle className="text-lg font-[800]">
+                <CardTitle className=" text-lg font-[800]">
                     HTML &amp; CSS Foundations
                 </CardTitle>
-                <div class="p-0 text-sm text-muted-foreground">
+                <div class="p-0 text-xs font-[600] text-neutral-400">
                     These languages are the backbone of every website,
                     definining structure, content, and presentation.
+                </div>
+                <div class="flex items-center gap-3">
+                    <Picture src={avatar} alt="Avatar Image" class="size-7" />
+                    <div class="text-sm font-[800]">Greg Hooper</div>
                 </div>
             </CardHeader>
         </Card>
