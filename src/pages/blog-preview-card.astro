@@ -8,31 +8,19 @@ import {
     CardHeader,
     CardContent,
 } from "../components/ui/card";
-import "@fontsource/figtree";
+// Supports weights 300-900
+import "@fontsource-variable/figtree";
 
 const tags = ["Learning"];
 ---
 
 <Layout title="Frontend Mentor | Blog Preview Card">
     <main
-        class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E]"
+        class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E] font-figtree"
     >
-        <!-- <div class="w-[20rem] rounded-3xl bg-white p-4 shadow-lg"> -->
-        <!--     <Image src={qrCode} alt="QR Code" class="size-72 rounded-xl" /> -->
-        <!--     <div -->
-        <!--         class="flex flex-col justify-between gap-4 p-4 text-center font-sans" -->
-        <!--     > -->
-        <!--         <h1 class="text-xl font-bold text-slate-800"> -->
-        <!--             Improve your front-end skills by building projects -->
-        <!--         </h1> -->
-        <!--         <div class="text-sm text-neutral-500"> -->
-        <!--             Scan the QR code to visit Frontend Mentor and take your -->
-        <!--             coding skills to the next level -->
-        <!--         </div> -->
-        <!--     </div> -->
-        <!-- </div> -->
-
-        <Card className="border-2 border-black shadow-[0.2rem_0.3rem_0_0_#000]">
+        <Card
+            className="rounded-2xl border border-black shadow-[0.2rem_0.3rem_0_0_#000]"
+        >
             <CardHeader className="max-w-64 gap-3">
                 <Image
                     src={blogPreview}
@@ -40,26 +28,24 @@ const tags = ["Learning"];
                     class="rounded-xl"
                 />
 
-                <div>
+                <div class="text-sm font-bold">
                     {
                         tags.map((tag) => (
-                            <span class="rounded bg-[#F5D04E] p-2">{tag}</span>
+                            <span class="rounded bg-[#F5D04E] px-2 py-1 shadow-[1px_1px_1px_0_rgba(0,0,0,.2)]">
+                                {tag}
+                            </span>
                         ))
                     }
                 </div>
 
-                <div class="text-xs">Published 21 Dec 2023</div>
+                <div class="font-figtree text-xs font-[600]">
+                    Published 21 Dec 2023
+                </div>
 
-                <CardTitle className="figtree font-bold"
+                <CardTitle className="font-figtree text-lg font-[800]"
                     >HTML &amp; CSS Foundations</CardTitle
                 >
             </CardHeader>
         </Card>
     </main>
 </Layout>
-
-<style>
-    .figtree {
-        font-family: "Figtree";
-    }
-</style>
