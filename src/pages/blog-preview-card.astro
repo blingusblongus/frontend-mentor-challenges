@@ -19,9 +19,9 @@ const tags = ["Learning"];
         class="flex h-[100vh] w-full items-center justify-center bg-[#F5D04E] font-figtree"
     >
         <Card
-            className="rounded-2xl border border-black shadow-[0.2rem_0.3rem_0_0_#000]"
+            className="w-72 rounded-2xl border border-black shadow-[0.2rem_0.3rem_0_0_#000]"
         >
-            <CardHeader className="max-w-64 gap-3">
+            <CardHeader className=" gap-3">
                 <Image
                     src={blogPreview}
                     alt="Preview Image"
@@ -38,13 +38,15 @@ const tags = ["Learning"];
                     }
                 </div>
 
-                <div class="font-figtree text-xs font-[600]">
-                    Published 21 Dec 2023
-                </div>
+                <div class="text-xs font-[600]">Published 21 Dec 2023</div>
 
-                <CardTitle className="font-figtree text-lg font-[800]"
-                    >HTML &amp; CSS Foundations</CardTitle
-                >
+                <CardTitle className="text-lg font-[800]">
+                    HTML &amp; CSS Foundations
+                </CardTitle>
+                <div class="p-0 text-sm text-muted-foreground">
+                    These languages are the backbone of every website,
+                    definining structure, content, and presentation.
+                </div>
             </CardHeader>
         </Card>
     </main>
